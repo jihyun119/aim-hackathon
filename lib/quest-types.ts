@@ -87,10 +87,11 @@ export const INTEREST_OPTIONS = [
 export type Interest = (typeof INTEREST_OPTIONS)[number];
 
 export const QUEST_PREF_OPTIONS = [
-  "익숙한 동네에서 새로운 골목 발견하기",
-  "오랜만에 떠오른 친구에게 안부 한 줄 보내기",
-  "오늘 본 풍경 중 가장 마음에 드는 한 장면 찍기",
-  "한 번도 안 가본 카페·식당 한 곳 들러보기",
-  "혼자 조용히 즐길 수 있는 작은 의식 만들기",
+  "오래 연락 못 한 친구한테 이유 없이 먼저 연락하기",
+  "평소 가던 길을 다른 길로 가보기",
+  "집에서 혼자 해본 적 없는 요리 하나 도전하기",
+  "오늘 하루 중 가장 오래 머문 자리 사진 찍기",
+  "자주 가는 카페 사장님이나 직원한테 스몰톡 걸기",
+  "오늘 오후 11시, 각자 있는 곳에서 달 사진 찍기",
 ] as const;
 export type QuestPref = (typeof QUEST_PREF_OPTIONS)[number];
