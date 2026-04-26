@@ -6,33 +6,34 @@ export const QUEST_TYPE_META: Record<
   {
     label: string;
     emoji: string;
-    /** Used on the quest card surface — soft tinted background. */
-    theme: string;
-    /** Inline chip / badge — slightly stronger contrast. */
+    tone: string;
+    ring: string;
     chip: string;
-    /** Bar / chart fill (Tailwind-friendly hex). */
     barColor: string;
   }
 > = {
   challenge: {
     label: "도전",
     emoji: "🔥",
-    theme: "from-orange-50 to-orange-100 text-orange-900 border-orange-200",
-    chip: "bg-orange-100 text-orange-800 border border-orange-200",
+    tone: "from-orange-950/70 to-orange-900/40 text-orange-100 border-orange-700/40",
+    ring: "ring-orange-400/40",
+    chip: "bg-orange-900/60 text-orange-200 border border-orange-700/50",
     barColor: "#f97316",
   },
   connection: {
     label: "연결",
     emoji: "🤝",
-    theme: "from-sky-50 to-sky-100 text-sky-900 border-sky-200",
-    chip: "bg-sky-100 text-sky-800 border border-sky-200",
+    tone: "from-sky-950/70 to-sky-900/40 text-sky-100 border-sky-700/40",
+    ring: "ring-sky-400/40",
+    chip: "bg-sky-900/60 text-sky-200 border border-sky-700/50",
     barColor: "#0ea5e9",
   },
   sharing: {
     label: "공유",
     emoji: "🌍",
-    theme: "from-violet-50 to-violet-100 text-violet-900 border-violet-200",
-    chip: "bg-violet-100 text-violet-800 border border-violet-200",
+    tone: "from-violet-950/70 to-violet-900/40 text-violet-100 border-violet-700/40",
+    ring: "ring-violet-400/40",
+    chip: "bg-violet-900/60 text-violet-200 border border-violet-700/50",
     barColor: "#8b5cf6",
   },
 };

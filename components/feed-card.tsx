@@ -99,7 +99,7 @@ export function FeedCard({ item }: { item: FeedItem }) {
         </div>
       </div>
 
-      {/* Top-right: category chip */}
+      {/* Top-right: quest type chip */}
       <div className="absolute right-4 top-5 rounded-full bg-white/20 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-md">
         {meta.emoji} {meta.label}
       </div>

@@ -111,7 +111,7 @@ export default function UploadPage() {
         <ArrowLeft className="h-4 w-4" /> 뒤로
       </button>
 
-      <Card className={`bg-gradient-to-br ${meta.theme} border-2`}>
+      <Card className={`bg-gradient-to-br ${meta.tone} border-2`}>
         <CardContent className="p-5 space-y-2">
           <Badge className={meta.chip}>
             {meta.emoji} {meta.label}

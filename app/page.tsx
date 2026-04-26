@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScatteredStars } from "@/components/scattered-stars";
+import { QuestarTitle } from "@/components/questar-title";
 import { cn } from "@/lib/utils";
 import {
   DAILY_STATES,
@@ -104,22 +106,24 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center animate-fade-in">
-      {step === 0 && (
-        <div className="text-center mb-8 space-y-3">
-          <div className="text-6xl mb-2">🎯</div>
-          <h1 className="text-4xl font-black tracking-tight">Questlog!!!</h1>
-          <p className="text-muted-foreground leading-relaxed">
-            AI가 매일 작은 퀘스트를 던져요.
-            <br />
-            먼저 당신을 짧게 알려주세요.
-          </p>
-        </div>
-      )}
+    <div className="relative min-h-[80vh] flex flex-col justify-center animate-fade-in">
+      <ScatteredStars count={70} />
 
-      <ProgressDots current={step} total={TOTAL_STEPS} />
+      <div className="relative z-[1]">
+        {step === 0 && (
+          <div className="text-center mb-8 space-y-4">
+            <QuestarTitle size="lg" />
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              AI가 매일 작은 퀘스트를 던져요.
+              <br />
+              먼저 당신을 짧게 알려주세요.
+            </p>
+          </div>
+        )}
 
-      <Card>
+        <ProgressDots current={step} total={TOTAL_STEPS} />
+
+        <Card>
         <CardContent className="p-6 space-y-5">
           {step === 0 && (
             <StepNickname
@@ -197,9 +201,10 @@ export default function OnboardingPage() {
         </CardContent>
       </Card>
 
-      <p className="text-center text-xs text-muted-foreground mt-6">
-        하나의 닉네임이 곧 당신의 계정이 돼요
-      </p>
+        <p className="text-center text-xs text-muted-foreground mt-6">
+          하나의 닉네임이 곧 당신의 계정이 돼요
+        </p>
+      </div>
     </div>
   );
 }

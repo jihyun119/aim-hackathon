@@ -25,7 +25,16 @@ export async function GET(req: Request) {
 
     if (error) return jsonError(error.message);
 
-    return NextResponse.json({ quests: data ?? [] });
+    const { count: totalCompleted } = await supabaseAdmin
+      .from("quests")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", userId)
+      .eq("completed", true);
+
+    return NextResponse.json({
+      quests: data ?? [],
+      totalCompleted: totalCompleted ?? 0,
+    });
   } catch (e) {
     return jsonError(e);
   }
